@@ -1,0 +1,126 @@
+:root {
+  --color-background: #353535;
+  --color-boxes: #d9d9d9;
+  --border: 1px solid #3c6e71;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 25em) {
+  html {
+    font-size: 40%;
+  }
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #353535;
+  height: 100vh;
+  overflow: hidden;
+  color: var(--color-O);
+  box-sizing: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media only screen and (min-width: 75em) {
+  body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.player {
+  font-size: 5.5rem;
+  color: #284b63;
+  margin-bottom: 3rem;
+}
+
+.heading-p {
+  font-size: 6.5rem;
+  color: #3c6e71;
+  line-height: 1.6;
+  letter-spacing: 1.2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .heading-p {
+    letter-spacing: 0.6rem;
+  }
+}
+
+.rest {
+  background-color: #fff;
+  color: #284b63;
+  margin-top: 3rem;
+  padding: 2rem 4rem;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+.rest:hover {
+  transform: scale(1.1);
+}
+
+.headers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 50rem;
+  width: 50rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.game_box {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game_box > * {
+  font-size: 14rem;
+  color: var(--color-boxes);
+}
+@media only screen and (max-width: 37.5em) {
+  .game_box > * {
+    font-size: 16rem;
+  }
+}
+.game_box:nth-child(-n + 3) {
+  border-bottom: var(--border);
+}
+.game_box:nth-child(3n + 1) {
+  border-right: var(--border);
+}
+.game_box:nth-child(3n) {
+  border-left: var(--border);
+}
+.game_box:nth-child(n + 7) {
+  border-top: var(--border);
+}
+
+/*# sourceMappingURL=style.css.map */
